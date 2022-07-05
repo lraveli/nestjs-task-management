@@ -8,13 +8,17 @@ import { AuthModule } from './auth/auth.module';
     TasksModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'ec2-34-242-84-130.eu-west-1.compute.amazonaws.com',
       port: 5432,
-      username: 'postgres',
-      password: 'postgres',
-      database: 'task-management',
+      username: 'rjqiltjnbuvurz',
+      password:
+        '261611d86898bae8224a9507f3b7d6a874c8d75c41a326778d94b02543812b35',
+      database: 'd362m4kd4uenme',
       autoLoadEntities: true,
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
     AuthModule,
   ],
